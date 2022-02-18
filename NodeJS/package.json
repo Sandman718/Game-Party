@@ -1,0 +1,23 @@
+{
+  "name": "gameparty",
+  "version": "1.0.0",
+  "description": "game party",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/211206NET/GameParty.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/211206NET/GameParty/issues"
+  },
+  "homepage": "https://github.com/211206NET/GameParty#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.1"
+  }
+}
