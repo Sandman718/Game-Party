@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Leaderboard</h1>
+    <a class="link" routerLink="/createAboutPlayer">Add to leadeboard</a>
+</div>
+<div class="container">
+    <table id="aboutPlayer-table" class="table" *ngIf="allAboutPlayer.length > 0 else noAboutPlayer">
+        <thead class="table-header">
+            <tr>
+                
+                <th>
+                    Username
+                </th>
+                <th>
+                    favoriteGames
+                </th>
+                <th>
+                    gamesWon
+                </th>
+                <th>
+                    gamesLost
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aboutPlayer of allAboutPlayer">
+                
+                <td>{{aboutPlayer.gameLibrary}}</td>
+                <td>{{aboutPlayer.favoriteGames}}</td>
+                <td>{{aboutPlayer.gamesWon}}</td>
+                <td>{{aboutPlayer.gamesLost}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noAboutPlayer>
+        <p id="no-aboutPlayer">
+            No about player
+        </p>
+    </ng-template>
+</div>
+

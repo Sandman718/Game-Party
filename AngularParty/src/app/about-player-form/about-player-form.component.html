@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Add To Leaderboard</h1>
+    <a class="link" routerLink="/aboutPlayers">Go back to aboutPlayers</a>
+</div>
+<div class="container">
+    <div class="row half-width">
+        <form (ngSubmit)="processForm(newAboutPlayerForm)" 
+        #newAboutPlayerForm="ngForm">
+            <div class="form-group">
+                <label for="aboutPlayer-name">Game Library:</label>
+                <input class="form-control" [(ngModel)]="aboutPlayer.gameLibrary" type="text" id="aboutPlayer.gameLibrary" name="aboutPlayer.gameLibrary" #gameLibrary="ngModel" required>               
+            </div>
+            <div class="form-group">
+                <label for="aboutPlayer-favoriteGames">Favorite Game</label>
+                <input class="form-control" type="text" id="aboutPlayer-favoriteGames" name="aboutPlayer-favoriteGames" [(ngModel)]="aboutPlayer.favoriteGames" #favoriteGames="ngModel" required>
+            </div>
+            <div class="form-group">
+                <label for="aboutPlayer-gameWon">Games Won</label>
+                <input class="form-control" type="text" id="aboutPlayer-gameWon" name="aboutPlayer-gameWon" [(ngModel)]="aboutPlayer.gamesWon" #gamesWon="ngModel" required>
+            </div>
+            <div class="form-group">
+                <label for="aboutPlayer-gameLost">Games Lost</label>
+                <input class="form-control" type="text" id="aboutPlayer-gameLost" name="aboutPlayer-gameLost" [(ngModel)]="aboutPlayer.gamesLost" #gamesLost="ngModel" required>
+            </div>
+            <div class="form-group">
+                <div *ngIf="displayFormSubmitError">
+                    There's something wrong with your form
+                </div>
+                <input type="submit" value="Create" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+</div>
